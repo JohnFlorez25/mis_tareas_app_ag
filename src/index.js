@@ -2,9 +2,9 @@ import { tareas } from "./tareas.js";
 import { misTareas } from "./components/consultarTareas.js";
 import { mostrarTarea } from "./components/mostrarTarea.js";
 import { agregarTarea } from "./components/agregarTarea.js";
-
+var opcion= 1;
 do {
-  let opcion = Number(
+  opcion = Number(
     prompt(`Digite la opción a ejecutar:
         1. Mostrar todas las tareas
         2. Mostrar una tarea
@@ -31,7 +31,7 @@ do {
       break;
     case 3:
         console.group("Agregando una nueva tarea");
-        agregarTarea();
+        agregarTarea(tareas);
         console.groupEnd();
         break;
 
